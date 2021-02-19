@@ -1,0 +1,125 @@
+html {
+    min-width: 700px;
+    min-height: 100%;
+}
+body {
+    min-height: 100%;
+    margin: 0;
+}
+.elp-flex-between {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.elp-flex-start-noWrap {
+    display: flex;
+    justify-content: flex-start;
+}
+.elp-flex-start {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.elp-block {
+    display: block;
+}
+.elp-flex-end {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.elp-flex-around {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.elp-fullscreen-center {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+.elp-width-100 {
+    width: 100%;
+}
+.elp-width-48-half {
+    width: 48.5%;
+}
+.elp-footer-change {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.elp-padding-0 {
+    padding: 0;
+}
+
+/*    index.vue 里的main    */
+.elp-margin-20 {
+    margin: 20px;
+}
+.elp-margin-0-20 {
+    margin: 0 20px;
+}
+.elp-margin-top-15 {
+    padding: 0;
+    margin-top: 15px;
+}
+.elp-margin-left-15 {
+    margin-left: 15px;
+}
+.elp-margin-right-20 {
+    margin-right: 20px;
+}
+.elp-margin-bottom-0 {
+    margin: -22.5px -22.5px 0 -22.5px;
+}
+.elp-border-radius {
+    border-radius: 4px;
+    overflow: hidden;
+}
+.elp-border-radius-4-0 {
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+}
+.elp-header-left-text {
+    line-height: 40px;
+}
+
+.elp-hot-tag{
+    font-size: 14px;
+    margin: 0 5px;
+}
+.elp-hot-tag:before{
+    content: "#";
+    margin-right: 2px;
+}
+.elp-text-center {
+    text-align: center;
+}
+.elp-text-big {
+    font-size: 23px;
+    font-weight: bold;
+}
+.elp-opacity-85 {
+    opacity: 0.85;
+}
+.elp-cursor-pointer {
+    cursor: pointer;
+}
+.elp-font-size-16 {
+    font-size: 16px;
+}
+.elp-margin-left-5 {
+    margin-left: 5px;
+}
+.elp-margin-right-5 {
+    margin-right: 5px;
+}
+.elp-margin-right-10 {
+    margin-right: 10px;
+}
+.elp-overflow-hidden {
+    overflow: hidden;
+}
