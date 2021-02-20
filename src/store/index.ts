@@ -16,7 +16,6 @@ export default createStore({
     },
     // 不需要请求后端的
     frontObject: {
-      imgBoxShow: false,
       backAsideShow: 'BackAside',
       backTabs: {
         editableTabsValue: '1',
@@ -27,6 +26,11 @@ export default createStore({
         }],
         tabIndex: 1
       },
+      asideList: [
+        { id: 1, name: 'page1', text: 'page1' },
+        { id: 2, name: 'page2', text: 'page2' },
+        { id: 3, name: 'page3', text: 'page3' }
+      ],
       asideItems: [
         { id: 1, name: 'MessageCenter', liClass: 'is_active', iClass: 'el-icon-bell', text: '信息中心' },
         { id: 2, name: 'CollectCenter', liClass: '', iClass: 'el-icon-star-off', text: '收藏中心' }

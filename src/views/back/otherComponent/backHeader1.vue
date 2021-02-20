@@ -1,8 +1,16 @@
 <template>
   <div class="back-header-1 elp-flex-between">
     <div class="header-left">
-      <i class="el-icon-s-fold" @click="backAsideShowChange" style="font-size: 20px"></i>
-      <div class="elp-margin-left-15"></div>
+      <div>
+        <i class="el-icon-s-fold" @click="backAsideShowChange" style="font-size: 19px"></i>
+      </div>
+      <div class="elp-margin-left-15 tab">
+        <el-tabs v-model="activeName" @tab-click="handleClick">
+          <template v-for="item in asideListX" :key="item.id">
+            <el-tab-pane :label="item.text" :name="item.name"></el-tab-pane>
+          </template>
+        </el-tabs>
+      </div>
     </div>
     <div class="header-right">
       <div class="right-item">
@@ -43,21 +51,35 @@ import { useStore } from 'vuex'
 export default {
   name: 'backHeader1',
   setup () {
+    const store = useStore()
+
+    const asideListX = store.state.frontObject.asideList
+    const activeName = asideListX[0].name
+    function handleClick (tab, event) {
+      console.log(tab, event)
+    }
+
     const userX = useStore().state.user
     function getFullUrl (imgUrl) {
       return require(`../../../assets/${imgUrl}`)
     }
-    const store = useStore()
     function backAsideShowChange () {
       store.state.frontObject.backAsideShow =
         store.state.frontObject.backAsideShow === 'BackAside' ? 'BackAsideSmall' : 'BackAside'
     }
-    return { userX, getFullUrl, backAsideShowChange }
+    return { userX, activeName, asideListX, getFullUrl, backAsideShowChange, handleClick }
   }
 }
 </script>
 
 <style scoped>
+.header-left {
+  display: flex;
+}
+.tab {
+  line-height: 40px;
+  margin-top: 8px;
+}
 .popover-item {
   transition: all .2s;
   cursor: pointer;
